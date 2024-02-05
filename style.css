@@ -66,12 +66,19 @@ main{
 }
 
 .title1 {
-  font-size: 20px; /* Tamaño de fuente de 18 píxeles */
+  font-size: 25px; /* Tamaño de fuente de 18 píxeles */
   font-weight: bold; /* Texto en negrita */
   margin-bottom: 10px; /* Margen inferior de 10 píxeles */
   margin-top: 10px;
+  text-align: center;
 }
 
+.subtitle {
+  font-size: 15px; /* Tamaño de fuente de 18 píxeles */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 5px; /* Margen inferior de 10 píxeles */
+  margin-top: 5px;
+}
 
 
 
