@@ -23,8 +23,53 @@ var map = L.map('map', {center: [6.815747,-73.270159], zoom: 14, zoomControl: fa
  var left = '<div class="header1"> Prototipo de Geoportal para la Escuela de Geología </div>';
  var contents = `
         <div class="content1">
-              	<div class="title1">Read Me</div>
-                <p></p>
+              	<div class="title1">Mapa de Campo</div>
+              	<p>El mapa de campo geológico es una representación cartográfica detallada de la superficie terrestre, diseñado para ilustrar la distribución y relaciones espaciales de las rocas, estructuras geológicas y otros fenómenos relevantes.</p>
+              	<div class="subtitle">Proyecto de Campo</div>
+                <p>Comprende la zona de estudio en la que se encuentran las respectivas estaciones de campo</p>
+                <div class="subtitle">GCP</div>
+                <p>Comprende los puntos GPS tomados en el terreno</p>
+                <div class="subtitle">Estaciones de campo</div>
+                <p>Comprende las características identificadas en cada una de las estaciones realizadas</p>
+                <div class="subtitle">Estratigrafía Sedimentológica</div>
+                <p>Comprende las estructuras sedimentarias (como estratificaciones y laminaciones) que se pudieron identificar en el afloramiento</p>
+                <div class="subtitle">Alteraciones</div>
+                <p>Corresponde a las características y propiedades de las zonas de alteración geológica del macizo</p>
+                <div class="subtitle">Discontinuidades Geológicas</div>
+                <p>Corresponde a los elementos que representan el trazado de estructuras a nivel local y regional que indican cualquier corte (fisura, grieta, diaclasa, superficies de estratificación) en el macizo rocoso</p>
+                <div class="subtitle">Datos Estructurales</div>
+                <p>Corresponde a los puntos que contienen los datos de rumbo y buzamiento que permiten identificar una estructura a nivel regional y local</p>
+                
+                <div class="title1">Mapa Geológico</div>
+              	<p>Un mapa geológico es una representación visual que muestra la distribución, tipo y relación de las formaciones geológicas en una región específica, proporcionando información esencial para entender la geología de la zona.</p>
+              	<div class="subtitle">Unidad Litológica</div>
+                <p>Corresponde a las unidades de roca que se identificaron en el terreno a escalas mayores de 1:15.000</p>
+                <div class="subtitle">Características Litológicas</div>
+                <p>Corresponde a las características que definan tanto la estructura, como la textura, composición, origen, ambiente y demás de la roca que se muestree en el afloramiento y que brinde más información sobre la unidad litológica que se define finalmente</p>
+                <div class="subtitle">Unidad Geológica</div>
+                <p>Comprende la unidad o formación geológica a escala regional (> 1:15.000) con la cual se pueden relacionar las rocas aflorantes en el terreno</p>
+                <div class="subtitle">Estratigrafía Sedimentológica</div>
+                <p>Comprende las estructuras sedimentarias (como estratificaciones y laminaciones) que se pudieron identificar en el afloramiento</p>
+                <div class="subtitle">Contacto Geológico</div>
+                <p>Corresponde a los límites de las unidades geológicas</p>
+                <div class="subtitle">Fallas</div>
+                <p>Corresponde a los elementos lineales que representan el trazado de una fractura o falla que se observa en un segmento de la superficie que se esta cartografiando, siendo esta lo suficientemente amplia para ser visible a simple vista</p>
+                <div class="subtitle">Pliegues</div>
+                <p>Corresponde a los elementos puntuales y lienales que resultan de la deformación de las capas geológicas</p>
+                
+                <div class="title1">Mapa Geomorfológico</div>
+              	<p>Un mapa geomorfológico es una representación gráfica que destaca las características del relieve terrestre, revelando patrones y formas del paisaje. Muestra la distribución de tierras altas, llanuras, valles y otros elementos, proporcionando información clave para comprender la evolución del terreno y sus procesos geodinámicos.</p>
+              	<div class="subtitle">Procesos Morfodinámicos</div>
+                <p>Elementos puntuales, lineales y áreas que identifican la morfología o dinámica de la superficie terrestre</p>
+                <div class="subtitle">Unidad Geomorfológica</div>
+                <p>Áreas que identifican la morfología de la superficie terrestre con características similares, según propuesta metodológica del IGAC y el SGC</p>
+                <div class="subtitle">Eventos Morfodinámicos</div>
+                <p>Corresponde con los movimientos en masa identificados</p>
+                
+                <div class="title1">Mapa Geofísico</div>
+              	<p>Un mapa geofísico es una representación cartográfica que refleja las mediciones de campos físicos en la Tierra, como la gravedad, magnetismo o resistividad eléctrica.</p>
+              	<div class="subtitle">Toma de datos Geofísicos</div>
+                <p>Corresponde a los elementos lineales y polígonos que relacionan la ubicación y descripción de los sitios donde se realizaron mediciones para un estudio geofísico</p>
             </div>`;
  
   //Enlazar servicio wms
