@@ -74,7 +74,7 @@ var map = L.map('map', {center: [6.815747,-73.270159], zoom: 14, zoomControl: fa
  
   //Enlazar servicio wms
  var ProyectoCampo = L.tileLayer.wms("http://localhost:8080/geoserver/ESGEO/wms?",{
-        Layers: 'shp_ProyectoCampo',
+        Layers: 'ProyectoCampo',
         format: 'image/png',
         transparent: true,
 }).addTo(map);
