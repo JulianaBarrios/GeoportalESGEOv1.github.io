@@ -8,7 +8,7 @@ L.controlCredits = function (options) {
 
 L.CreditsControl = L.Control.extend({
     options: {
-        position: 'bottomright'
+        position: 'bottomleft'
     },
     initialize: function (options) {
         const settings = Object.assign({

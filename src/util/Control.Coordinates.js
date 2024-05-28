@@ -4,7 +4,7 @@
 
 L.Control.Coordinates = L.Control.extend({
 	options: {
-		position: 'bottomright',
+		position: 'bottomleft',
 		//decimals used if not using DMS or labelFormatter functions
 		decimals: 4,
 		//decimalseperator used if not using DMS or labelFormatter functions

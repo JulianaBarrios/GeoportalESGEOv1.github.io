@@ -1,9 +1,9 @@
 L.Control.SlideMenu = L.Control.extend({
     options: {
         position: 'topleft',
-        menuposition: 'topleft', // topleft,topright,bottomleft,bottomright
+        menuposition: 'bottomleft', // topleft,topright,bottomleft,bottomright
         width: '300px',
-        height: '100%',
+        height: '90%',
         direction: 'horizontal', // vertical or horizontal
         changeperc: '10',
         delay: '10',
@@ -14,8 +14,9 @@ L.Control.SlideMenu = L.Control.extend({
             class_down: 'fa fa-chevron-down',
             class_left: 'fa fa-chevron-left',
             class_right: 'fa fa-chevron-right',
-            size: '16pt',
-            color: '#BBCC22'
+            position: 'sticky',
+            size: '24pt',
+            color: '#190707'
         }
     },
 
@@ -32,7 +33,7 @@ L.Control.SlideMenu = L.Control.extend({
     onAdd: function(map){
         this._container = L.DomUtil.create('div', 'leaflet-control-slidemenu leaflet-bar leaflet-control');
         var link = L.DomUtil.create('a', 'leaflet-bar-part leaflet-bar-part-single', this._container);
-        link.title = 'Menu';
+        link.title = 'Menú';
         L.DomUtil.create('span', this.options.icon, link);
 
         this._menu = L.DomUtil.create('div', 'leaflet-menu', map._container);

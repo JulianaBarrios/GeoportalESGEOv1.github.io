@@ -1,61 +1,86 @@
-/*
- * L.Control.WMSLegend is used to add a WMS Legend to the map
- */
-
 L.Control.WMSLegend = L.Control.extend({
     options: {
-        position: 'topright',
-        uri: ''
+        position: 'bottomright',
+        uris: [],  
+        layerNames: []  
+    },
+
+    initialize: function (options) {
+        L.setOptions(this, options);
     },
 
     onAdd: function () {
         var controlClassName = 'leaflet-control-wms-legend',
-            legendClassName = 'wms-legend',
             stop = L.DomEvent.stopPropagation;
-        this.container = L.DomUtil.create('div', controlClassName);
-        this.img = L.DomUtil.create('img', legendClassName, this.container);
-        this.img.src = this.options.uri;
-        this.img.alt = 'Legend';
 
-        L.DomEvent
-            .on(this.img, 'click', this._click, this)
-            .on(this.container, 'click', this._click, this)
-            .on(this.img, 'mousedown', stop)
-            .on(this.img, 'dblclick', stop)
-            .on(this.img, 'click', L.DomEvent.preventDefault)
-            .on(this.img, 'click', stop);
-        this.height = null;
-        this.width = null;
+        this.container = L.DomUtil.create('div', controlClassName + ' wms-legend-collapsed');
+
+        // Crear y añadir las leyendas para cada URI
+        this.options.uris.forEach((uri, index) => {
+            var legendContainer = L.DomUtil.create('div', 'wms-legend-container', this.container);
+
+            // Crear un subcontenedor para la leyenda
+            var legendItem = L.DomUtil.create('div', 'wms-legend-item', legendContainer);
+
+            // Añadir la imagen de la leyenda
+            var img = L.DomUtil.create('img', 'wms-legend-icon', legendItem);
+            img.src = uri;
+            img.alt = 'Legend';
+
+            // Añadir el nombre de la capa
+            var label = L.DomUtil.create('span', 'wms-legend-label', legendItem);
+            label.innerText = this.options.layerNames[index] || '';
+
+            L.DomEvent
+                .on(legendContainer, 'click', this._toggleCollapse, this)
+                .on(img, 'mousedown', stop)
+                .on(img, 'dblclick', stop)
+                .on(img, 'click', L.DomEvent.preventDefault)
+                .on(img, 'click', stop);
+        });
+
+        // Crear el botón de "expandir"
+        this.expandButton = L.DomUtil.create('div', 'expand-button', this.container);
+        this.expandButton.innerHTML = '&#x23EA';
+
+        L.DomEvent.on(this.expandButton, 'click', this._toggleCollapse, this);
+
         return this.container;
     },
-    _click: function (e) {
-        L.DomEvent.stopPropagation(e);
-        L.DomEvent.preventDefault(e);
-        // toggle legend visibility
-        var style = window.getComputedStyle(this.img);
-        if (style.display === 'none') {
-            this.container.style.height = this.height + 'px';
-            this.container.style.width = this.width + 'px';
-            this.img.style.display = this.displayStyle;
-        }
-        else {
-            if (this.width === null && this.height === null) {
-                // Only do inside the above check to prevent the container
-                // growing on successive uses
-                this.height = this.container.offsetHeight;
-                this.width = this.container.offsetWidth;
-            }
-            this.displayStyle = this.img.style.display;
-            this.img.style.display = 'none';
-            this.container.style.height = '20px';
-            this.container.style.width = '20px';
+
+    _toggleCollapse: function () {
+        var container = this.container;
+        if (container.className.indexOf('wms-legend-collapsed') !== -1) {
+            container.className = container.className.replace('wms-legend-collapsed', '');
+            this.expandButton.innerHTML = '&#x2612';
+        } else {
+            container.className += ' wms-legend-collapsed';
+            this.expandButton.innerHTML = '&#x23EA';
         }
     },
+
+    update: function (uris, layerNames) {
+        this.options.uris = uris;
+        this.options.layerNames = layerNames;
+        
+        // Limpiar el contenedor existente
+        while (this.container.firstChild) {
+            this.container.removeChild(this.container.firstChild);
+        }
+
+        // Añadir las leyendas actualizadas
+        this.onAdd();
+    }
 });
 
-L.wmsLegend = function (uri) {
-    var wmsLegendControl = new L.Control.WMSLegend;
-    wmsLegendControl.options.uri = uri;
+L.wmsLegend = function (uris, layerNames, map) {
+    var wmsLegendControl = new L.Control.WMSLegend({
+        uris: uris,
+        layerNames: layerNames
+    });
     map.addControl(wmsLegendControl);
     return wmsLegendControl;
 };
+
+
+

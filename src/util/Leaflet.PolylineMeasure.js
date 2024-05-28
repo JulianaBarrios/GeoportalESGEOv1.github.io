@@ -37,25 +37,25 @@
 			 * @type {String}
 			 * @default
 			 */
-			unit: 'metres',
+			unit: 'metros',
 			/**
 			 * Title for the control going to be switched on
 			 * @type {String}
 			 * @default
 			 */
-			measureControlTitleOn: "Turn on PolylineMeasure",
+			measureControlTitleOn: "Activar medición de línea",
 			/**
 			 * Title for the control going to be switched off
 			 * @type {String}
 			 * @default
 			 */
-			measureControlTitleOff: "Turn off PolylineMeasure",
+			measureControlTitleOff: "Desactivar medición de línea",
 			/**
 			 * HTML to place inside the control. This should just be a unicode icon
 			 * @type {String}
 			 * @default
 			 */
-			measureControlLabel: '&#8614;',
+			measureControlLabel: '&#x2924;',
 			/**
 			 * Classes to apply to the control
 			 * @type {Array}
@@ -91,13 +91,13 @@
 			 * @type {String}
 			 * @default
  			 */
-			clearControlTitle: 'Clear Measurements',
+			clearControlTitle: 'Borrar líneas',
 			/**
 			 * Clear control inner html
 			 * @type {String}
 			 * @default
  			 */
-			clearControlLabel: '&times;',
+			clearControlLabel: '&#128465',
 			/**
 			 * Collection of classes to add to clear control button
 			 * @type {Array}
@@ -120,7 +120,7 @@
 				 * @type {String}
 				 * @default
 				 */
-				color: '#00f',
+				color: '#BF00FF',
 				/**
 				 * Dashed line weight
 				 * @type {Number}
@@ -138,13 +138,13 @@
 				 * @type {String}
 				 * @default
 				 */
-				color: '#006',
+				color: '#BF00FF',
 				/**
 				 * Solid line weight
 				 * @type {Number}
 				 * @default
 				 */
-				weight: 2
+				weight: 3
 			},
             /**
              * Style settings for circle marker indicating the starting point of the polyline
@@ -162,7 +162,7 @@
                  * @type {Number}
                  * @default
                  */
-				weight: 1,
+				weight: 2,
                 /**
                  * Fill color of the circle
                  * @type {String}
@@ -180,7 +180,7 @@
                  * @type {Number}
                  * @default
                  */
-				radius: 3
+				radius: 4
 			},
             /**
              * Style settings for all circle markers between startCircle and endCircle
@@ -216,7 +216,7 @@
                  * @type {Number}
                  * @default
                  */
-				radius: 3
+				radius: 4
 			},
             /**
              * Style settings for circle marker indicating the latest point of the polyline during drawing a line
@@ -234,7 +234,7 @@
                  * @type {Number}
                  * @default
                  */
-                weight: 1,
+                weight: 2,
                 /**
                  * Fill color of the circle
                  * @type {String}
@@ -270,7 +270,7 @@
                  * @type {Number}
                  * @default
                  */
-                weight: 1,
+                weight: 2,
                 /**
                  * Fill color of the circle
                  * @type {String}
@@ -288,7 +288,7 @@
                  * @type {Number}
                  * @default
                  */
-                radius: 3
+                radius: 4
 			}
 		},
 		
@@ -346,10 +346,10 @@
                 self._clearMeasureControl.classList.add('polyline-measure-clearControl')
 			}
 			if (self.options.showUnitControl) {
-				var title = "Change units [" + self.options.unit  + "]";
-				if (self.options.unit=="metres") {
+				var title = "Cambiar unidades [" + self.options.unit  + "]";
+				if (self.options.unit=="metros") {
 					var label = "m";
-				}  else if  (self.options.unit=="landmiles") {
+				}  else if  (self.options.unit=="millas") {
 					var label = "mi";
 				} else {
 					var label = "nm";
@@ -429,17 +429,17 @@
 		
 		_changeUnit: function() {
 			var self = this;
-			if (self.options.unit == "metres") {
-				self.options.unit = "landmiles";
+			if (self.options.unit == "metros") {
+				self.options.unit = "millas";
 				document.getElementById("unitControlId").innerHTML = "mi";
-            } else if (self.options.unit == "landmiles") {
-				self.options.unit = "nauticalmiles";
+            } else if (self.options.unit == "millas") {
+				self.options.unit = "millas naúticas";
 				document.getElementById("unitControlId").innerHTML = "nm";
 			} else {
-				self.options.unit = "metres";
+				self.options.unit = "metros";
 				document.getElementById("unitControlId").innerHTML = "m";
 			}
-			self._unitControl.title = "Change units [" + self.options.unit  + "]";
+			self._unitControl.title = "Cambiar unidades [" + self.options.unit  + "]";
 			self._arrTooltips.map (function (item1, index1) {    
 				self._arrTooltips[index1].map (function (item2, index2) {    
 					if (index2 >= 1)  {                     
@@ -481,7 +481,7 @@
 			var self = this;
 			var dist = distance;
 			var symbol;
-			if (self.options.unit === 'nauticalmiles') {
+			if (self.options.unit === 'millas naúticas') {
 				unit = "nm";
 				if (dist >= 1852000) {
 					dist = (dist/1852).toFixed(0);
@@ -491,7 +491,7 @@
 				} else  {
 					dist = (dist/1852).toFixed(2);
 				}
-			} else if (self.options.unit === 'landmiles') {
+			} else if (self.options.unit === 'millas') {
 				unit = "mi";
 				if (dist >= 1609344) {
 					dist = (dist/1609.344).toFixed(0);

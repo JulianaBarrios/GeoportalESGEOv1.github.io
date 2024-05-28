@@ -3,11 +3,11 @@
 }
 
 .leaflet-menu{
-    position: absolute;
+    position: fixed;
     background-color: rgba(255, 255, 255, 255);
-    overflow: auto;
-    cursor: default;
-    z-index: 9999;
+    overflow: scroll;
+    cursor: pointer;
+    z-index: 1000;
     box-shadow: #222 -1px -1px 20px 0px;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .leaflet-menu::-webkit-scrollbar{
-    width: 7px;
+    width: 10px;
     height: 7px;
     background: #f2f2f2;
 }
@@ -29,11 +29,11 @@
 .leaflet-menu-close-button{
     background-color: transparent;
     border: none;
-    font-size: 14pt;
-    color: #777;
+    font-size: 18pt;
+    color: #000000;
     cursor: pointer;
 }
 
 .leaflet-menu-close-button:hover{
-    color: #0443a8;
+    color: #000000;
 }

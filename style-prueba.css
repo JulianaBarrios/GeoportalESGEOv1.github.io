@@ -1,0 +1,129 @@
+.h2ti{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+}
+img{
+    margin: 5px;
+}
+.title{
+    margin: 30px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura visible */
+}
+map {
+    width: 100%; /* Hacer que el mapa ocupe toda la anchura disponible */
+    height: 100vh; /* Hacer que el mapa ocupe toda la altura del viewport */
+    position: relative;
+}
+main {
+    flex: 1; /* Permite que el contenido principal ocupe todo el espacio restante */
+    overflow-y: auto; /* Agrega desplazamiento vertical si es necesario */
+}
+.fo1{
+    width: 50%; /* Ancho relativo para ajustar el tamaño según la pantalla */
+    max-width: 100px; /* Ancho máximo para asegurar que no sean demasiado grandes */
+    height: auto; /* Altura automática para mantener la proporción de la imagen */
+}
+.fo3{
+    width: 60%; /* Ancho relativo para ajustar el tamaño según la pantalla */
+    max-width: 100px; /* Ancho máximo para asegurar que no sean demasiado grandes */
+    height: auto; /* Altura automática para mantener la proporción de la imagen */
+}
+.fo2{
+    height: 40px;
+    width: 40px;
+}
+
+.list-inline{
+   display: flex;
+   justify-content: flex-start;
+   list-style-type: none;
+}
+
+.list-inline-item{
+    margin-top: 0px;
+    text-align: center;
+}
+
+.header1 {
+  background-color: #4CAF50; /* Color de fondo verde */
+  color: white; /* Texto en color blanco */
+  padding: 10px; /* Relleno interno de 15 píxeles */
+  text-align: center; /* Texto centrado */
+  font-size: 24px;
+}
+
+.content1 {
+  padding: 20px; /* Relleno interno de 20 píxeles */
+  text-align: left;
+}
+
+.title1 {
+  font-size: 25px; /* Tamaño de fuente de 18 píxeles */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 10px; /* Margen inferior de 10 píxeles */
+  margin-top: 10px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 15px; /* Tamaño de fuente de 18 píxeles */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 5px; /* Margen inferior de 10 píxeles */
+  margin-top: 5px;
+}
+
+/* Estilos CSS para mover el control geocoder */
+.leaflet-control-geocoder {
+    position: relative;
+    top: -74px;     /* Ajusta según la posición vertical deseada */
+    left: 80px;
+    z-index: 1000;   /* Ajusta la cantidad de píxeles a la derecha */
+}
+
+/* Estilos CSS para mover el control locate */
+.leaflet-control-locate {
+    position: static;
+    top: -118px;
+    left: 40px;      /* Ajusta según la posición vertical deseada */
+}
+
+/* Personaliza el estilo del ícono del control FileLayerLoad */
+.leaflet-control-filelayer {
+    position: static;
+    top: -274px; /* Ajusta la posición vertical */
+    left: 40px; /* Ajusta la posición horizontal */
+}
+
+.leaflet-control-Polyline-Measure {
+    position: static;
+    top: -274px; /* Ajusta la posición vertical */
+    left: 40px; /* Ajusta la posición horizontal */
+}
+
+/* Estilos CSS para mover el control slideMenu */
+.leaflet-control-slidemenu {
+    position: static;
+    bottom: 190px;      /* Ajusta según la posición vertical deseada */
+    left: 0px;     /* Ajusta la cantidad de píxeles a la derecha */
+}
+
+.leaflet-control-coordinates {
+    position: static;
+    left: 160px;     
+    top: 190px;
+}
+
+
+
+
+
+
+
