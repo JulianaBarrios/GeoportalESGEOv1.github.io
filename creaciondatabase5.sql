@@ -1,76 +1,6 @@
 --usar función para la creación de los guid--
 SELECT uuid_generate_v4();
 
---eliminar dominios--
-DROP DOMAIN Dom_Roca;
-DROP DOMAIN Dom_Meteor;
-DROP DOMAIN Dom_Estratif;
-DROP DOMAIN Dom_Lamina;
-DROP DOMAIN Dom_Altera;
-DROP DOMAIN Dom_Discon;
-DROP DOMAIN Dom_Ind_Cinem;
-DROP DOMAIN Dom_Tipo_Estratif;
-DROP DOMAIN Dom_Tipo_Lamina;
-DROP DOMAIN Dom_Estruct_Sed;
-DROP DOMAIN Dom_TipoSedimen;
-DROP DOMAIN Dom_GeomEstrat;
-DROP DOMAIN Dom_Espesor;
-DROP DOMAIN Dom_Fosiles;
-DROP DOMAIN Dom_TipoFos;
-DROP DOMAIN Dom_Columna;
-DROP DOMAIN Dom_Alteracion;
-DROP DOMAIN Dom_EstiloAlt;
-DROP DOMAIN Dom_Tipo_Disconti;
-DROP DOMAIN Dom_Persistenc;
-DROP DOMAIN Dom_DatoEstruct;
-DROP DOMAIN Dom_Class_Met;
-DROP DOMAIN Dom_Class_Pluto;
-DROP DOMAIN Dom_Class_Volca;
-DROP DOMAIN Dom_Roca_Sed;
-DROP DOMAIN Dom_Facies;
-DROP DOMAIN Dom_Grado_Met;
-DROP DOMAIN Dom_Tipo_Met;
-DROP DOMAIN Dom_EstructMet;
-DROP DOMAIN Dom_Compo_Met;
-DROP DOMAIN Dom_Zona_Met;
-DROP DOMAIN Dom_Magma;
-DROP DOMAIN Dom_TextIgn;
-DROP DOMAIN Dom_Ambient_Sed;
-DROP DOMAIN Dom_Eon_Geo;
-DROP DOMAIN Dom_Era_Geo;
-DROP DOMAIN Dom_Period_Geo;
-DROP DOMAIN Dom_Epoc_Geo;
-DROP DOMAIN Dom_Tipo_ContUG;
-DROP DOMAIN Dom_Tipo_Falla;
-DROP DOMAIN Dom_Cinema;
-DROP DOMAIN Dom_Pliegue_Geom;
-DROP DOMAIN Dom_Pliegue_Estrat;
-DROP DOMAIN Dom_Pliegue_AnaGeom;
-DROP DOMAIN Dom_Pliegue_Config;
-DROP DOMAIN Dom_Pliegue_Aper;
-DROP DOMAIN Dom_Pliegue_Estilo;
-DROP DOMAIN Dom_Pliegue_ExtReg;
-DROP DOMAIN Dom_ProcesoMorfodin;
-DROP DOMAIN Dom_NombProceso;
-DROP DOMAIN Dom_EstadoProceso;
-DROP DOMAIN Dom_Geoestruct;
-DROP DOMAIN Dom_AmbMorfogen;
-DROP DOMAIN Dom_Paisaje;
-DROP DOMAIN Dom_Tipo_Relieve;
-DROP DOMAIN Dom_Facies_Material;
-DROP DOMAIN Dom_Forma_Terreno;
-DROP DOMAIN Dom_Provincia;
-DROP DOMAIN Dom_Componente;
-DROP DOMAIN Dom_TipoMov;
-DROP DOMAIN Dom_SubtMM;
-DROP DOMAIN Dom_Parte;
-DROP DOMAIN Dom_EstiloMM;
-DROP DOMAIN Dom_EstadoMM;
-DROP DOMAIN Dom_MetGeof;
-DROP DOMAIN Dom_UnidadGeof;
-DROP DOMAIN Dom_Mallado;
-DROP DOMAIN Dom_TipoTecnica;
-
 --crear dominios--
 CREATE DOMAIN Dom_Roca AS CHAR(16) CONSTRAINT Dom_Roca_const CHECK (VALUE IN ('Roca fresca', 
 													   'Roca meteorizada', 
@@ -1078,31 +1008,6 @@ CREATE DOMAIN Dom_TipoTecnica AS CHAR(30) CONSTRAINT Dom_TipoTecnica_const CHECK
 															  'Radiometría de Rayos Gamma', 
 															  'Otra'));		
 	
-	
---eliminar tablas--
-DROP TABLE IF EXISTS Proceso_Morfodina_PT;
-DROP TABLE IF EXISTS Pliegues_PT;
-DROP TABLE IF EXISTS GeofisicaPG;
-DROP TABLE IF EXISTS GeofisicaLN;
-DROP TABLE IF EXISTS GCP;
-DROP TABLE IF EXISTS EventosMorfodinam;
-DROP TABLE IF EXISTS EstratigrafiaSedimentologica;
-DROP TABLE IF EXISTS Discontinuidades;
-DROP TABLE IF EXISTS Dato_Estructural;
-DROP TABLE IF EXISTS CaracteristicaLito;
-DROP TABLE IF EXISTS Alteraciones;
-DROP TABLE IF EXISTS UnidadLito;
-DROP TABLE IF EXISTS UnidadGeomorfo;
-DROP TABLE IF EXISTS UnidadGeo;
-DROP TABLE IF EXISTS Proceso_Morfodina_PG;
-DROP TABLE IF EXISTS Proceso_Morfidina_LN;
-DROP TABLE IF EXISTS Pliegues_LN;
-DROP TABLE IF EXISTS Fallas;
-DROP TABLE IF EXISTS Estaciones;
-DROP TABLE IF EXISTS ContactoGeo;
-DROP TABLE IF EXISTS ProyectoCampo;
-
-
 --creación de las tablas--															  
 CREATE TABLE ProyectoCampo (
     "Guid" VARCHAR (22) NOT NULL,
