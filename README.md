@@ -1,5 +1,11 @@
 Visita nuestro [sitio](https://julianabarrios.github.io/GeovisorESGEOv1.github.io/) piloto.
-# Propuesta Metodológica para la Implementación de un Modelo de Datos Geográfico en Entorno SIG y el Diseño de un Geovisor para la Información Geocientífica Generada por la Escuela de Geología
+<p align="center">
+  <img src="img/LOGO UIS_PNG.png" alt="Imagen 1" width="200"/>
+  <img src="img/Sin título-1.png" alt="Imagen 2" width="200"/>
+</p>
+
+<h1 align="center">Propuesta Metodológica para la Implementación de un Modelo de Datos Geográfico en Entorno SIG y el Diseño de un Geovisor para la Información Geocientífica Generada por la Escuela de Geología</h1>
+
 
 ## Descripción del Proyecto
 
