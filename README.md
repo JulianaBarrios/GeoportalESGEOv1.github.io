@@ -20,7 +20,7 @@ Con el creciente valor de la información geocientífica en investigación y tom
 ## Tabla de Contenidos
 
 1. [Metodología](#Metodología)
-2. [Modelo de Datos Geográfico](#ModelodeDatosGeográfico)
+2. [Modelo de Datos Geográfico](#MDG)
 3. [Características](#características)
 4. [Contribuir](#contribuir)
 5. [Licencia](#licencia)
@@ -31,7 +31,7 @@ Con el creciente valor de la información geocientífica en investigación y tom
   <img src="arquitecturas2_page-0001.jpg" alt="Imagen Metodología" width="900"/>
 </p>
 
-## Modelo de Datos Geográfico
+## MDG
 
 <p align="center">
   <img src="Geociencias (7).png" alt="Imagen Metodología" width="1000"/>
