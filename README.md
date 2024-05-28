@@ -27,7 +27,27 @@ Con el creciente valor de la información geocientífica en investigación y tom
 
 ## Metodología
 
+<p align="center">
+  <img src="img/temp908.png" alt="Imagen Metodología" width="400"/>
+</p>
+
 ## Modelo de Datos Geográfico
 
+<p align="center">
+  <img src="img/Geociencias (7).png" alt="Imagen Metodología" width="400"/>
+</p>
+
+## Características
+
+Lista de las principales características del proyecto.
+
+- Recopilación y estandarización de datos geocientíficos.
+- Diseño de un Modelo de Datos Geográfico (MDG).
+- Implementación en un entorno de Sistemas de Información Geográfica (SIG).
+- Desarrollo de un Geovisor para la visualización de datos.
+- Infraestructura de Datos Espaciales (IDE).
+
 ## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
