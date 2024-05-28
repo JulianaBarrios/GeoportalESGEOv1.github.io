@@ -28,13 +28,13 @@ Con el creciente valor de la información geocientífica en investigación y tom
 ## Metodología
 
 <p align="center">
-  <img src="img/temp908.png" alt="Imagen Metodología" width="1200"/>
+  <img src="img/temp908.png" alt="Imagen Metodología" width="1000"/>
 </p>
 
 ## Modelo de Datos Geográfico
 
 <p align="center">
-  <img src="img/Geociencias (7).png" alt="Imagen Metodología" width="1200"/>
+  <img src="img/Geociencias (7).png" alt="Imagen Metodología" width="1000"/>
 </p>
 
 ## Características
