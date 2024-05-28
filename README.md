@@ -30,7 +30,7 @@ Con el creciente valor de la información geocientífica en investigación y tom
   <img src="arquitecturas2_page-0001.jpg" alt="Imagen Metodología" width="900"/>
 </p>
 
-## Modelo de Datos Geográfico
+## Modelo_de_Datos_Geográfico
 
 <p align="center">
   <img src="Geociencias (7).png" alt="Imagen Metodología" width="1000"/>
