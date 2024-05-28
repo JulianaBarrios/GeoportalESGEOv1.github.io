@@ -1,6 +1,6 @@
 Visita nuestro [sitio](https://julianabarrios.github.io/GeovisorESGEOv1.github.io/) piloto.
 <p align="center">
-  <img src="img/LOGO UIS_PNG1.png" alt="Imagen 1" width="190"/>
+  <img src="img/LOGO UIS_PNG1.png" alt="Imagen 1" width="170"/>
   <img src="img/Sin título-1.png" alt="Imagen 2" width="200"/>
 </p>
 
