@@ -48,7 +48,7 @@ if (!('keys' in Object)) {
 wms.Source = L.Layer.extend({
     'options': {
         'untiled': true,
-        'identify': false
+        'identify': true,
     },
 
     'initialize': function(url, options) {
@@ -205,14 +205,14 @@ wms.Source = L.Layer.extend({
         if (result == "error") {
             // AJAX failed, possibly due to CORS issues.
             // Try loading content in <iframe>.
-            result = "<iframe src='" + url + "' style='border:none'>";
+            result = "<iframe src='" + url + "' style='border:none; width: 100%; height: 100%; background-color: white;'>";
         }
         return result;
     },
 
     'showFeatureInfo': function(latlng, info) {
         // Hook to handle displaying parsed AJAX response to the user
-        if (!this._map) {
+        if (!this._map) {       
             return;
         }
         this._map.openPopup(info, latlng);
@@ -287,6 +287,8 @@ wms.getSourceForUrl = function(url, options) {
     }
     return sources[url];
 };
+
+
 
 
 // Copy tiled WMS layer from leaflet core, in case we need to subclass it later
